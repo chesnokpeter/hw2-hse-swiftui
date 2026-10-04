@@ -1,9 +1,13 @@
 import SwiftUI
 
-@main struct MyApp: App {
+@main
+struct MyApp: App {
     var body: some Scene {
-        WindowGroup {
+        WindowGroup("Покупки") {
             ContentView()
+                #if os(macOS)
+                .frame(minWidth: 420, minHeight: 450)
+                #endif
         }
     }
 }
